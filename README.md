@@ -26,13 +26,13 @@
 
 Name of feature: ________________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 5 h
 
-Start time: _____
+Start time: 2 pm
 
-Finish time: _____
+Finish time: 9:40 pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: task is not fully finished. 
 
 # Start your own "Can of Books" App
 
