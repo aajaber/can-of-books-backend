@@ -1,0 +1,20 @@
+'use strict';
+
+const mongoose= require('mongoose');
+
+
+const bookSchema= new mongoose.Schema({
+    
+    title:{type: String},
+    description:{type: String},
+    status:{type: String},
+    email:{type: String},
+   
+});
+
+
+//============================== book model:
+
+const bookModel= mongoose.model('books', bookSchema);
+
+module.exports= bookModel;
