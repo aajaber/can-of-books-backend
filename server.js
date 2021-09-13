@@ -1,20 +1,21 @@
 'use strict';
-
-
-
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const mongoose =require('mongoose');
 
 //=============== books import (require).
-const { getBooks } = require('./controllers/book.controller.js');
+const {
+   getBooks,
+   createBooks,
+   deleteBook
+ } = require('./controllers/book.controller.js');
 const seedBook = require('./helper/bookSeed.seed');
 
 
 //===============================================
 
- seedBook();
+//  seedBook();
 
 //===============================================
 
@@ -27,11 +28,14 @@ mongoose.connect(`${MONGO_URL}/${DataBase_NAME}`);
 //===================================
 const app = express();
 app.use(cors());
+app.use(express.json());
 //===================================
 
 
 
 app.get('/book',getBooks);
+app.post('/book', createBooks);
+app.delete('/book/:book_id', deleteBook);
 
 
 // const PORT = process.env.PORT || 3001;
