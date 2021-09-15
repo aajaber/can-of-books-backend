@@ -5,11 +5,10 @@ const bookModel = require('../models/books.model');
 
 const getBooks = (request, response) => {
 
-    bookModel.find((error, booksData) => {
+    bookModel.find({ email: request.query.email },(error, booksData) => {
     response.json(booksData)
   });
-
-};
+}; 
 
 // const createBooks = (request, response) => {
 
