@@ -39,7 +39,7 @@ app.use(express.json());
 app.get('/book',getBooks);
 app.post('/book', createBooks);
 app.delete('/book/:book_id', deleteBook);
-app.put('/cat/:book_id', updateBook)
+app.put(':/book/:id ', updateBook)
 
 
 // const PORT = process.env.PORT || 3001;
